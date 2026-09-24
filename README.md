@@ -2,7 +2,7 @@
 
 NOVA is a fictional streetwear store I made as my end term project for SST Web Dev 101. It's a single page shop with a product grid, a featured sneaker, a specifications table, reviews and an order form.
 
-Live site: https://YOUR-USERNAME.github.io/nova/
+Live site: https://akshataa369.github.io/NOVA/
 
 ## Built with
 
