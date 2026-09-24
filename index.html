@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NOVA | Everyday pieces, designed to move</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#home" class="logo">NOVA</a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#shop">Search</a>
+                <a href="#checkout" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-section" id="home">
+            <div class="container">
+                <h1 class="hero-title">Everyday pieces.<br>Designed to move.</h1>
+
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p>Sneakers, apparel and accessories made for long days on your feet. Six pieces, chosen carefully and built to be worn often.</p>
+                        <a href="#shop" class="button button-dark">Shop collection</a>
+                        <p class="hero-note">Free delivery on orders above ₹1,999</p>
+                    </div>
+
+                    <img src="https://images.pexels.com/photos/33167524/pexels-photo-33167524.jpeg" alt="A model wearing the NOVA Runner and Essential Hoodie" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-section" id="shop">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>The collection</h2>
+                    <p>Six pieces for this season.</p>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/12739976/pexels-photo-12739976.jpeg" alt="Nova Runner sneaker">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Nova Runner</h3>
+                                <p class="product-category">Sneakers</p>
+                            </div>
+                            <p class="product-price">₹2,999</p>
+                        </div>
+                        <a href="#product" class="button button-outline">View product</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/19461581/pexels-photo-19461581.jpeg" alt="Essential Hoodie in sage">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Essential Hoodie</h3>
+                                <p class="product-category">Apparel</p>
+                            </div>
+                            <p class="product-price">₹2,199</p>
+                        </div>
+                        <button class="button button-outline" onclick="addToCart('Essential Hoodie', 1)">Add to cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/17835505/pexels-photo-17835505.jpeg" alt="Core Tee in off-white">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Core Tee</h3>
+                                <p class="product-category">Apparel</p>
+                            </div>
+                            <p class="product-price">₹899</p>
+                        </div>
+                        <button class="button button-outline" onclick="addToCart('Core Tee', 1)">Add to cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/13930046/pexels-photo-13930046.jpeg" alt="Street Runner sneaker">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Street Runner</h3>
+                                <p class="product-category">Sneakers</p>
+                            </div>
+                            <p class="product-price">₹3,499</p>
+                        </div>
+                        <button class="button button-outline" onclick="addToCart('Street Runner', 1)">Add to cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/36367488/pexels-photo-36367488.jpeg" alt="Everyday Tote bag in canvas">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Everyday Tote</h3>
+                                <p class="product-category">Accessories</p>
+                            </div>
+                            <p class="product-price">₹1,299</p>
+                        </div>
+                        <button class="button button-outline" onclick="addToCart('Everyday Tote', 1)">Add to cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.pexels.com/photos/29996213/pexels-photo-29996213.jpeg" alt="Axis Cap in stone grey">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3>Axis Cap</h3>
+                                <p class="product-category">Accessories</p>
+                            </div>
+                            <p class="product-price">₹799</p>
+                        </div>
+                        <button class="button button-outline" onclick="addToCart('Axis Cap', 1)">Add to cart</button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section" id="product">
+            <div class="container featured-layout">
+
+                <img src="https://images.pexels.com/photos/12739976/pexels-photo-12739976.jpeg" alt="Nova Runner sneaker, side view" class="featured-image">
+
+                <div class="featured-details">
+                    <p class="product-category">Sneakers</p>
+                    <h2>Nova Runner</h2>
+                    <p class="featured-price">₹2,999</p>
+                    <p class="featured-description">A lightweight everyday sneaker with a breathable mesh upper and a cushioned rubber sole. Comfortable from the first wear.</p>
+
+                    <form class="featured-form" onsubmit="addNovaRunner(); return false;">
+                        <fieldset class="size-options">
+                            <legend class="option-label">Size (UK)</legend>
+
+                            <input type="radio" name="size" id="size-7" value="7" required>
+                            <label for="size-7">7</label>
+
+                            <input type="radio" name="size" id="size-8" value="8">
+                            <label for="size-8">8</label>
+
+                            <input type="radio" name="size" id="size-9" value="9">
+                            <label for="size-9">9</label>
+
+                            <input type="radio" name="size" id="size-10" value="10">
+                            <label for="size-10">10</label>
+
+                            <input type="radio" name="size" id="size-11" value="11">
+                            <label for="size-11">11</label>
+                        </fieldset>
+
+                        <label for="featured-quantity" class="option-label">Quantity</label>
+                        <input type="number" id="featured-quantity" class="quantity-input" min="1" max="10" value="1" required>
+
+                        <button type="submit" class="button button-accent add-to-cart-button">Add to cart</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="container specs-layout">
+                <div class="specs-intro">
+                    <h3>Specifications</h3>
+                    <p>Everything you need to know before choosing your pair.</p>
+                </div>
+
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Upper</td>
+                            <td>Synthetic mesh</td>
+                        </tr>
+                        <tr>
+                            <td>Sole</td>
+                            <td>Rubber with foam cushioning</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>320 g (UK 9)</td>
+                        </tr>
+                        <tr>
+                            <td>Sizes</td>
+                            <td>UK 7 to 11</td>
+                        </tr>
+                        <tr>
+                            <td>Warranty</td>
+                            <td>6 months</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container about-layout">
+                <img src="https://images.pexels.com/photos/8973475/pexels-photo-8973475.jpeg" alt="The NOVA studio with pieces from the collection" class="about-image">
+
+                <div class="about-text">
+                    <h2>About NOVA</h2>
+                    <p>NOVA makes everyday essentials built around comfort, movement and understated design. We release a small collection each season instead of hundreds of products, so every piece gets our full attention.</p>
+                    <ul class="about-list">
+                        <li>Designed in Bengaluru</li>
+                        <li>Small seasonal collections</li>
+                        <li>Free returns within 15 days</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>What customers say</h2>
+                </div>
+
+                <div class="reviews-grid">
+                    <figure class="review">
+                        <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                        <blockquote>Comfortable, simple and exactly what I wanted.</blockquote>
+                        <figcaption>Aanya, Pune</figcaption>
+                    </figure>
+
+                    <figure class="review">
+                        <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                        <blockquote>I walk to college every day in the Nova Runner. Still looks new after three months.</blockquote>
+                        <figcaption>Rohan, Chennai</figcaption>
+                    </figure>
+
+                    <figure class="review">
+                        <p class="review-stars" aria-label="4 out of 5 stars">★★★★☆</p>
+                        <blockquote>The hoodie is thick and fits well. I wish it came in more colours.</blockquote>
+                        <figcaption>Meera, Delhi</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-section" id="checkout">
+            <div class="container checkout-layout">
+                <div class="checkout-intro">
+                    <p id="order-confirmed" class="order-message">Thank you. Your order request has been received.</p>
+                    <h2>Place an order</h2>
+                    <p>Fill in your details and we will confirm your order by email.</p>
+                    <p class="checkout-note">Thank you for shopping with NOVA!</p>
+                </div>
+
+                <form class="checkout-form" action="#order-confirmed">
+                    <div class="form-field">
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="order-product">Product</label>
+                        <select id="order-product" required>
+                            <option>Nova Runner</option>
+                            <option>Essential Hoodie</option>
+                            <option>Core Tee</option>
+                            <option>Street Runner</option>
+                            <option>Everyday Tote</option>
+                            <option>Axis Cap</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field form-field-wide">
+                        <label for="address">Address</label>
+                        <textarea id="address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="size">Size</label>
+                        <select id="size" required>
+                            <option value="">Choose a size</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                            <option>UK 7</option>
+                            <option>UK 8</option>
+                            <option>UK 9</option>
+                            <option>UK 10</option>
+                            <option>UK 11</option>
+                            <option>One size</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="order-quantity">Quantity</label>
+                        <input type="number" id="order-quantity" min="1" max="10" value="1" required>
+                    </div>
+
+                    <fieldset class="form-field form-field-wide payment-options">
+                        <legend>Payment method</legend>
+                        <label><input type="radio" name="payment" value="UPI" checked> UPI</label>
+                        <label><input type="radio" name="payment" value="Card"> Card</label>
+                        <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on delivery</label>
+                    </fieldset>
+
+                    <button type="submit" class="button button-dark form-field-wide">Place order</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container footer-layout">
+            <div>
+                <p class="footer-logo">NOVA</p>
+                <p class="footer-tagline">Everyday pieces, designed to move.</p>
+                <p class="footer-contact">hello@nova.example<br>+91 98814 76107</p>
+            </div>
+
+            <div>
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#checkout">Order</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Follow</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p> 2026 NOVA </p>
+        </div>
+    </footer>
+
+    <div id="cart-message" class="cart-message"></div>
+    <script src="script.js"></script>
+</body>
+</html>
